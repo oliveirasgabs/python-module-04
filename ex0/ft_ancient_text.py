@@ -1,14 +1,6 @@
 import sys
 from typing import IO
 
-# I can only use Authorized:
-# import sys, sys.argv, len(), open(), import typing, typing.IO, io.read(),
-# io.close(), print()#
-
-# Its authorized: The following standard types and collections are allowed,
-# along with all their associated methods and constructors:
-# str, int, float, list, dict, set, tuple.
-
 
 def main() -> None:
     if len(sys.argv) != 2:
@@ -19,7 +11,7 @@ def main() -> None:
     print("=== Cyber Archives Recovery ===")
     print(f"Accessing file {filename}")
 
-    file_handle: IO | None = None
+    file_handle: IO[str] | None = None
     try:
         file_handle = open(filename, 'r')
         content: str = file_handle.read()
