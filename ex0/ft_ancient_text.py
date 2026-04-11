@@ -4,7 +4,7 @@ from typing import IO
 
 def main() -> None:
     if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} <filename>")
+        print(f"Usage: {sys.argv[0]} <file>")
         return
 
     filename: str = sys.argv[1]
